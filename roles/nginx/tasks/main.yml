@@ -1,0 +1,15 @@
+---
+- name: Install nginx
+  apt: pkg=nginx state=present update_cache=yes
+
+- name: Start nginx at boot
+  service: name=nginx state=started enabled=yes
+
+- name: Copy nginx configuration
+  template: src={{ configuration_file }} dest=/etc/nginx/sites-enabled/{{ dest }}
+  notify: restart nginx
+
+- name: Deny access to install.php
+  tags: after_installation
+  shell: sed -i '/location = \/dokuwiki\/install.php {/a \ \ \ \ \ \ \ \ deny all;' /etc/nginx/sites-enabled/dokuwiki
+  notify: restart nginx
