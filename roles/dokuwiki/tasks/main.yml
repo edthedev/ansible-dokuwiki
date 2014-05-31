@@ -1,4 +1,7 @@
 ---
+ - name: fix apt
+   shell: apt-get update
+
  - name: Download latest stable dokuwiki tarball
    get_url: url=http://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz dest=/var/tmp/dokuwiki-stable.tgz
 

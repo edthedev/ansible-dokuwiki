@@ -2,8 +2,10 @@
 - name: Install dokuwiki
   hosts: learn.delaporte.us
   user: root
+  gather_facts: false
   
   roles:
+   - debian-fixes
    - { role: nginx, configuration_file: 'roles/dokuwiki/templates/default.conf', dest: dokuwiki }
    - php5-fpm
    - dokuwiki

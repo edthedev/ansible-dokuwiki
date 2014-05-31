@@ -1,0 +1,8 @@
+---
+#- name: fix apt
+#  shell: apt-get update
+# - name: set locale
+ # command: echo LANG="en_US.UTF-8" > /etc/default/locale; echo LANGUAGE="en_US:en" >> /etc/default/locale creates=/etc/default/locale 
+
+- name: nginx lib missing
+  apt: pkg=libgd2-noxpm state=installed

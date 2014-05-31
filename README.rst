@@ -15,6 +15,11 @@ To run it:
 
 4. Update `dokuwiki.yml` with your remote computer's hostname and user.
 
-5. Run the ansible playbook.::
+5. Set the locale on the remote computer.::
+
+   ssh myhostname.example.net
+   dpkg-reconfigure locales
+
+6. Run the ansible playbook.::
 
     ansible-playbook --skip-tags=after_installation dokuwiki.yml
