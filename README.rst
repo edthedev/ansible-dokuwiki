@@ -1,6 +1,8 @@
 ansible-dokuwiki
 ================
 
+Everything is Perl locale pain.
+
 Ansible script to install Dokuwiki, stolen from the Dokuwiki_Wiki_.
 
 .. _Dokuwiki_Wiki: https://www.dokuwiki.org/install:ansible
