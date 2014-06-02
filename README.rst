@@ -25,3 +25,12 @@ To run it:
 6. Run the ansible playbook.::
 
     ansible-playbook --skip-tags=after_installation dokuwiki.yml
+
+7. Visit the install URL.::
+
+   TODO: Document expected install URL on localhost 8080
+
+8. Run the hardening playbook to close it out.::
+
+   TODO: Split the hardening command into a separate playbook to simplify commands.
+
