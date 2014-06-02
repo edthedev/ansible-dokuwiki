@@ -12,7 +12,8 @@
    command: mkdir /srv/dokuwiki
    
  - name: Move dokuwiki
-   shell: mv /var/tmp/dokuwiki-2013-12-08/* /srv/dokuwiki/
+   # shell: mv /var/tmp/dokuwiki-2013-12-08/* /srv/dokuwiki/
+   shell: mv /var/tmp/dokuwiki-2014-05-05/* /srv/dokuwiki/
 
  - name: Fix permissions
    shell: chown -R www-data /srv/dokuwiki/*

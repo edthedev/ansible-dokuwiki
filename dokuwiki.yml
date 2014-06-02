@@ -1,7 +1,10 @@
 ---
 - name: Install dokuwiki
-  hosts: learn.delaporte.us
-  user: root
+  # hosts: learn.delaporte.us
+  hosts: vagrant
+  # remote_user: vagrant
+  user: vagrant
+  sudo: yes
   gather_facts: false
   
   roles:
