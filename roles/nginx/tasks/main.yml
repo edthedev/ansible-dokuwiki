@@ -11,10 +11,10 @@
   notify: restart nginx
 
 - name: remove default nginx configs
-  file: dest=/etc/nginx/sites-available/default state=removed
+  file: dest=/etc/nginx/sites-available/default state=absent
 
 - name: remove default nginx configs
-  file: dest=/etc/nginx/sites-enabled/default state=removed
+  file: dest=/etc/nginx/sites-enabled/default state=absent
 
 #- name: Deny access to install.php
 #php  tags: after_installation
