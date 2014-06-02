@@ -26,6 +26,16 @@ To run it:
 
     ansible-playbook --skip-tags=after_installation dokuwiki.yml
 
+7. Check the Nginx log files for any errors::
+
+    ssh myhostname.example.net
+    tail /var/log/nginx/error.log
+    tail /var/log/nginx/access.log
+
+8. Restart Nginx one last time...just in case...::
+
+   TODO: Rejig playbooks to remove this need.
+
 7. Visit the install URL.::
 
    TODO: Document expected install URL on localhost 8080
