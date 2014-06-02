@@ -9,7 +9,7 @@
    command: tar -xvf dokuwiki-stable.tgz chdir=/var/tmp
 
  - name: Prepare target directory
-   command: mkdir /srv/dokuwiki
+   command: mkdir -p /srv/dokuwiki
    
  - name: Move dokuwiki
    # shell: mv /var/tmp/dokuwiki-2013-12-08/* /srv/dokuwiki/
